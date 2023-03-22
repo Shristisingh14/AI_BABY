@@ -33,13 +33,12 @@ function gotResult(error, results) {
 
     objects = results;
 }
-person = "person";
+
 
 function draw() {
     image(video, 0, 0, 400, 400);
     
-    if(status != "")
-    {
+    if(status != "") {
         r = random(255);
         g = random(255);
         b = random(255);
@@ -53,7 +52,7 @@ function draw() {
              noFill();
              stroke(r,g,b);
              rect(objects[i].x, objects[i].y, objects[i].width, objects[i].height);
-             if(objects[i].label != person)
+             if(objects[i].label != "person")
             {
                audio.play();
                document.getElementById("status").innerHTML = "Status : Baby not found";
